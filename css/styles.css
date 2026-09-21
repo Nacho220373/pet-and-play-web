@@ -538,6 +538,49 @@ img {
   box-shadow: 0 10px 20px rgba(255, 230, 0, 0.3);
 }
 
+.btn-meli:hover {
+  background: #FFF059;
+  transform: translateY(-3px);
+  color: #2D3277;
+  box-shadow: 0 10px 20px rgba(255, 230, 0, 0.3);
+}
+
+/* B2B Section */
+.b2b-section {
+  padding: 100px 0;
+  background-color: var(--bg-surface);
+}
+
+.b2b-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.b2b-content h2 {
+  font-size: 40px;
+  margin-bottom: 24px;
+  color: var(--color-dark-blue);
+}
+
+.b2b-content p {
+  font-size: 18px;
+  color: var(--text-muted);
+  margin-bottom: 32px;
+}
+
+.b2b-benefits {
+  margin-bottom: 40px;
+}
+
+.b2b-benefits li {
+  font-weight: 700;
+  color: var(--color-dark-blue);
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
 /* Footer */
 .footer {
   background: white;
@@ -812,12 +855,14 @@ img {
 
 /* Responsive Design */
 @media (max-width: 992px) {
-  .hero-grid {
+  .hero-grid,
+  .b2b-grid {
     grid-template-columns: 1fr;
     text-align: center;
   }
   
-  .hero-content p {
+  .hero-content p,
+  .b2b-content p {
     margin: 0 auto 40px;
   }
   
@@ -825,6 +870,10 @@ img {
     justify-content: center;
   }
   
+  .b2b-benefits li {
+    justify-content: center;
+  }
+
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 40px;
