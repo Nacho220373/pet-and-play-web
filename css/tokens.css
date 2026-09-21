@@ -1,0 +1,38 @@
+:root {
+  /* Brand Typography */
+  --font-primary: 'Montserrat', sans-serif;
+  --font-heading: 'Fredoka One', cursive;
+
+  /* Brand Colors - Primary */
+  --color-light-blue: #8FC7EE; /* Pantone 2905 C */
+  --color-dark-blue: #414066; /* Pantone 5265 C */
+  --color-gold: #E2C36A; /* Pantone 2008 C */
+  --color-orange-brown: #D3853C; /* Pantone 7412 C */
+
+  /* Business Line Colors */
+  --cat-antipulgas: #E94E1B; /* Antipulgas y garrapatas */
+  --cat-belleza: #1D71B8; /* Belleza e higiene */
+  --cat-gatos: #951B81; /* Gatos */
+  --cat-hogar: #3AAA35; /* Hogar */
+  --cat-pecuario: #8F512E; /* Pecuario */
+
+  /* UI Tokens */
+  --bg-color: #FAFAFA;
+  --bg-surface: #FFFFFF;
+  --text-main: #2A2A35;
+  --text-muted: #6C6C7D;
+
+  --border-radius-sm: 8px;
+  --border-radius-md: 16px;
+  --border-radius-lg: 24px;
+  --border-radius-pill: 9999px;
+
+  --shadow-sm: 0 4px 6px -1px rgba(65, 64, 102, 0.1), 0 2px 4px -1px rgba(65, 64, 102, 0.06);
+  --shadow-md: 0 10px 15px -3px rgba(65, 64, 102, 0.1), 0 4px 6px -2px rgba(65, 64, 102, 0.05);
+  --shadow-lg: 0 20px 25px -5px rgba(65, 64, 102, 0.1), 0 10px 10px -5px rgba(65, 64, 102, 0.04);
+  --shadow-glow: 0 0 15px rgba(143, 199, 238, 0.5); /* Light blue glow */
+
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}

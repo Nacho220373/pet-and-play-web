@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pet&Play - Bienestar y salud de perros, gatos y más.">
+  <title>Pet&Play | Salud y Bienestar para tus Mascotas</title>
+  
+  <!-- Fonts: Montserrat and Fredoka One from Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-container">
+      <div class="logo">
+        <img src="assets/logo.png" alt="Pet&Play Logo" class="brand-logo">
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#" class="nav-link">Inicio</a></li>
+          <li><a href="#categorias" class="nav-link">Categorías</a></li>
+          <li><a href="#tienda" class="nav-link">Tienda</a></li>
+          <li><a href="#contacto" class="nav-link">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <a href="#tienda" class="btn btn-primary">Comprar Ahora</a>
+        <button id="cart-btn" class="btn-cart" aria-label="Ver Carrito">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+          <span id="cart-count" class="cart-count">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <h1>Lo mejor para el bienestar de <span>tus mascotas</span></h1>
+        <p>Somos una empresa 100% mexicana enfocada en la salud, higiene y diversión de tus perros, gatos y animales de cuidado.</p>
+        <div class="hero-actions">
+          <a href="#tienda" class="btn btn-primary">Ver Catálogo</a>
+          <a href="#contacto" class="btn btn-secondary">Asesoría</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <!-- High quality unsplash image of dog and cat -->
+        <img src="https://images.unsplash.com/photo-1543852786-1cf6624b9987?auto=format&fit=crop&q=80&w=800&h=600" alt="Mascotas felices Pet&Play">
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories Banner -->
+  <section id="categorias" class="categories">
+    <div class="container categories-container">
+      <div class="category-item" data-category="todos">
+        <div class="category-icon icon-img-container">
+          <img src="assets/icon-todos.png" alt="Todos" class="category-img">
+        </div>
+        <span class="category-name">Ver Todos</span>
+      </div>
+      <div class="category-item" data-category="antipulgas">
+        <div class="category-icon icon-img-container">
+          <img src="assets/icon-antipulgas.png" alt="Antipulgas" class="category-img">
+        </div>
+        <span class="category-name">Antipulgas</span>
+      </div>
+      <div class="category-item" data-category="belleza">
+        <div class="category-icon icon-img-container">
+          <img src="assets/icon-belleza.png" alt="Belleza e Higiene" class="category-img">
+        </div>
+        <span class="category-name">Belleza e Higiene</span>
+      </div>
+      <div class="category-item" data-category="gatos">
+        <div class="category-icon icon-img-container">
+          <img src="assets/icon-gatos.png" alt="Gatos" class="category-img">
+        </div>
+        <span class="category-name">Gatos</span>
+      </div>
+      <div class="category-item" data-category="hogar">
+        <div class="category-icon icon-img-container">
+          <img src="assets/icon-hogar.png" alt="Hogar" class="category-img">
+        </div>
+        <span class="category-name">Hogar</span>
+      </div>
+      <div class="category-item" data-category="pecuario">
+        <div class="category-icon icon-img-container">
+          <img src="assets/icon-pecuario.png" alt="Pecuario" class="category-img">
+        </div>
+        <span class="category-name">Pecuario</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Store/Catalog Section -->
+  <section id="tienda" class="products-section container">
+    <div class="section-header">
+      <h2>Nuestra Tienda</h2>
+      <p>Productos de calidad superior para el mercado nacional</p>
+    </div>
+    
+    <div id="products-grid" class="products-grid">
+      <!-- Products will be injected here via JavaScript -->
+    </div>
+  </section>
+
+  <!-- Mercado Libre CTA -->
+  <section class="cta-section">
+    <div class="container cta-container">
+      <h2>Encuéntranos en Mercado Libre</h2>
+      <p>Visita nuestra tienda oficial para envíos rápidos y seguros a todo México.</p>
+      <a href="https://www.mercadolibre.com.mx/pagina/petandplay#from=share_eshop" target="_blank" rel="noopener noreferrer" class="btn btn-meli">
+        Visitar Tienda Oficial
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contacto" class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <img src="assets/logo-white.png" alt="Pet&Play Logo" class="brand-logo">
+          </div>
+          <p>Nuestra misión es ser los mejores en servicio, fabricación, distribución y comercialización de productos veterinarios.</p>
+          <div class="social-links">
+            <a href="https://www.instagram.com/petnplay.mx?stkn=MWJjbDZzbHVtcGtwNA==" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+          </div>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Enlaces Rápidos</h4>
+          <div class="footer-links">
+            <a href="#categorias">Categorías</a>
+            <a href="#tienda">Tienda Online</a>
+            <a href="https://www.mercadolibre.com.mx/pagina/petandplay#from=share_eshop" target="_blank">Mercado Libre</a>
+          </div>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <div class="footer-links">
+            <a href="https://wa.me/5215534155560" target="_blank">WhatsApp: +52 1 55 3415 5560</a>
+            <span>Atención: Maripaz Corona</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Pet'n Play. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Shopping Cart Sidebar -->
+  <div id="cart-sidebar" class="cart-sidebar">
+    <div class="cart-header">
+      <h3>Tu Carrito</h3>
+      <button id="close-cart" class="btn-close-cart">&times;</button>
+    </div>
+    <div id="cart-items" class="cart-items">
+      <!-- Items will be injected here -->
+      <p class="empty-cart-msg">Tu carrito está vacío.</p>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total:</span>
+        <span id="cart-total-price">$0.00</span>
+      </div>
+      <button id="checkout-btn" class="btn btn-primary btn-checkout">Proceder al Pago</button>
+    </div>
+  </div>
+  <div id="cart-overlay" class="cart-overlay"></div>
+
+  <!-- WhatsApp Floating Action Button -->
+  <a href="https://wa.me/5215534155560" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+    <svg width="30" height="30" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.441-1.273.6-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.029 18.88c-1.161 0-2.305-.292-3.318-.844l-3.677.964.984-3.595c-.607-1.052-.927-2.246-.926-3.468.001-3.825 3.113-6.937 6.937-6.937 1.856.001 3.598.723 4.907 2.034 1.31 1.311 2.031 3.054 2.03 4.908-.001 3.825-3.113 6.938-6.937 6.938z"/></svg>
+  </a>
+
+  <!-- Main JavaScript File as a Module -->
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
