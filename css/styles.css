@@ -158,7 +158,7 @@ img {
 }
 
 .brand-logo {
-  height: 40px; /* Adjust based on actual logo proportion */
+  height: 90px;
   width: auto;
   object-fit: contain;
 }
