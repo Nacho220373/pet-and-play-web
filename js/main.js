@@ -82,77 +82,75 @@ function updateCartUI() {
 }
 
 // --- DOM Event Listeners ---
-document.addEventListener('DOMContentLoaded', () => {
-  // 1. Initial Render of all products
-  renderProductGrid(products, 'products-grid');
+// 1. Initial Render of all products
+renderProductGrid(products, 'products-grid');
 
-  // 2. Category Filtering Logic
-  const categoryFilters = document.querySelectorAll('.category-item');
-  
-  categoryFilters.forEach(filter => {
-    filter.addEventListener('click', () => {
-      const categoryId = filter.dataset.category;
-      
-      // Filter products
-      let filteredProducts = products;
-      if (categoryId !== 'todos') {
-        filteredProducts = products.filter(p => p.category === categoryId);
-      }
-      
-      // Re-render
-      renderProductGrid(filteredProducts, 'products-grid');
-      
-      // Scroll to products section smoothly
-      document.getElementById('tienda').scrollIntoView({ behavior: 'smooth' });
-    });
+// 2. Category Filtering Logic
+const categoryFilters = document.querySelectorAll('.category-item');
+
+categoryFilters.forEach(filter => {
+  filter.addEventListener('click', () => {
+    const categoryId = filter.dataset.category;
+    
+    // Filter products
+    let filteredProducts = products;
+    if (categoryId !== 'todos') {
+      filteredProducts = products.filter(p => p.category === categoryId);
+    }
+    
+    // Re-render
+    renderProductGrid(filteredProducts, 'products-grid');
+    
+    // Scroll to products section smoothly
+    document.getElementById('tienda').scrollIntoView({ behavior: 'smooth' });
   });
+});
 
-  // 3. Smooth scrolling for navigation links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      const targetId = this.getAttribute('href');
-      
-      if(targetId === '#') {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-        return;
-      }
-      
-      const targetElement = document.querySelector(targetId);
-      if(targetElement) {
-        targetElement.scrollIntoView({
-          behavior: 'smooth'
-        });
-      }
-    });
-  });
-
-  // 4. Cart UI Toggles
-  const cartSidebar = document.getElementById('cart-sidebar');
-  const cartOverlay = document.getElementById('cart-overlay');
-  
-  const closeCart = () => {
-    cartSidebar.classList.remove('open');
-    cartOverlay.classList.remove('active');
-  };
-
-  document.getElementById('cart-btn').addEventListener('click', () => {
-    cartSidebar.classList.add('open');
-    cartOverlay.classList.add('active');
-  });
-
-  document.getElementById('close-cart').addEventListener('click', closeCart);
-  cartOverlay.addEventListener('click', closeCart);
-
-  // Mock checkout behavior
-  document.getElementById('checkout-btn').addEventListener('click', () => {
-    if (cart.length === 0) {
-      alert('Tu carrito está vacío. ¡Agrega productos primero!');
-    } else {
-      alert('¡Gracias por tu compra simulada! Procediendo al pago de $' + cart.reduce((s, i) => s + (i.price * i.quantity), 0).toFixed(2));
-      cart = [];
-      updateCartUI();
-      closeCart();
+// 3. Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const targetId = this.getAttribute('href');
+    
+    if(targetId === '#') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+    
+    const targetElement = document.querySelector(targetId);
+    if(targetElement) {
+      targetElement.scrollIntoView({
+        behavior: 'smooth'
+      });
     }
   });
+});
+
+// 4. Cart UI Toggles
+const cartSidebar = document.getElementById('cart-sidebar');
+const cartOverlay = document.getElementById('cart-overlay');
+
+const closeCart = () => {
+  cartSidebar.classList.remove('open');
+  cartOverlay.classList.remove('active');
+};
+
+document.getElementById('cart-btn').addEventListener('click', () => {
+  cartSidebar.classList.add('open');
+  cartOverlay.classList.add('active');
+});
+
+document.getElementById('close-cart').addEventListener('click', closeCart);
+cartOverlay.addEventListener('click', closeCart);
+
+// Mock checkout behavior
+document.getElementById('checkout-btn').addEventListener('click', () => {
+  if (cart.length === 0) {
+    alert('Tu carrito está vacío. ¡Agrega productos primero!');
+  } else {
+    alert('¡Gracias por tu compra simulada! Procediendo al pago de $' + cart.reduce((s, i) => s + (i.price * i.quantity), 0).toFixed(2));
+    cart = [];
+    updateCartUI();
+    closeCart();
+  }
 });
