@@ -337,22 +337,18 @@ img {
 
 /* Category Images */
 .icon-img-container {
-  width: 64px;
-  height: 64px;
-  border-radius: var(--border-radius-md);
+  width: 80px;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f0f0f0; /* Default placeholder bg */
-  overflow: hidden;
-  box-shadow: var(--shadow-sm);
   transition: var(--transition-normal);
 }
 
 .category-img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Change to contain if logos are transparent icons */
+  object-fit: contain; 
 }
 
 /* Colors for specific categories */
