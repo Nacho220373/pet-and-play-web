@@ -5,7 +5,7 @@ export const products = [
     title: 'Collar Antipulgas Unitalla',
     category: 'antipulgas',
     price: 185.00,
-    image: 'assets/productos/collar-antipulgas.png',
+    image: 'assets/productos/COLLAR ANTIPULGAS.png',
     description: 'Control y eliminación de pulgas y garrapatas. Protección continua por 3 meses.'
   },
   {
@@ -13,7 +13,7 @@ export const products = [
     title: 'Talco Antipulgas (100g)',
     category: 'antipulgas',
     price: 120.00,
-    image: 'assets/productos/talco-antipulgas.png',
+    image: 'assets/productos/TALCO ANTIPULGAS.png',
     description: 'Polvo fino listo para usar. Protege de pulgas, garrapatas y otros insectos.'
   },
   {
@@ -21,7 +21,7 @@ export const products = [
     title: 'Jabón Antipulgas',
     category: 'antipulgas',
     price: 85.00,
-    image: 'assets/productos/jabon-antipulgas.png',
+    image: 'assets/productos/vitrolero -01.png',
     description: 'Fórmula especializada de piretrinas naturales, ideal para pieles sensibles.'
   },
   {
@@ -29,7 +29,7 @@ export const products = [
     title: 'Pipetas Antipulgas',
     category: 'antipulgas',
     price: 250.00,
-    image: 'assets/productos/pipetas.png',
+    image: 'assets/productos/CAJILLA PIPETA  0.5ML.png',
     description: 'Uso externo. Protege hasta 90 días contra pulgas y 30 días contra garrapatas.'
   },
   {
@@ -47,15 +47,15 @@ export const products = [
     title: 'Repelente Natural Training (250ml)',
     category: 'belleza',
     price: 160.00,
-    image: 'assets/productos/repelente-natural.png',
+    image: 'assets/productos/NATURAL TRAINING.png',
     description: 'Extractos naturales para mantener alejadas a las mascotas de lugares prohibidos.'
   },
   {
     id: 'p7',
     title: 'Shampoo Chocolate (250ml)',
     category: 'belleza',
-    price: 135.00,
-    image: 'assets/productos/shampoo-chocolate.png',
+    price: 137.00,
+    image: 'assets/productos/SHAMPOO CHOCOLATE.png',
     description: 'Aroma a chocolate, ingredientes naturales y libre de parabenos.'
   },
   {
@@ -63,31 +63,31 @@ export const products = [
     title: 'Shampoo Bamboo (250ml)',
     category: 'belleza',
     price: 135.00,
-    image: 'assets/productos/shampoo-bamboo.png',
+    image: 'assets/productos/SHAMPOO BAMBOO.png',
     description: 'Extracto de Aloe vera. Resalta el brillo natural del pelo.'
   },
   {
     id: 'p9',
     title: 'Perfume Aroma Frutal (Hembras)',
     category: 'belleza',
-    price: 150.00,
-    image: 'assets/productos/perfume-frutal.png',
+    price: 143.00,
+    image: 'assets/productos/PERFUME 250ML HEMBRA .png',
     description: 'Acción desodorante que deja sensación de limpieza y frescura.'
   },
   {
     id: 'p10',
     title: 'Perfume Macho Alfa',
     category: 'belleza',
-    price: 150.00,
-    image: 'assets/productos/perfume-macho.png',
+    price: 143.00,
+    image: 'assets/productos/PERFUME 250ML ALFA .png',
     description: 'Especial para perros machos, acción desodorante post-grooming.'
   },
   {
     id: 'p11',
     title: 'Perfume Fresh Bamboo',
     category: 'belleza',
-    price: 150.00,
-    image: 'assets/productos/perfume-bamboo.png',
+    price: 147.00,
+    image: 'assets/productos/PERFUME BAMBOO.png',
     description: 'Fragancia desodorante para perros y gatos. Aroma fresco.'
   },
   {
@@ -95,7 +95,7 @@ export const products = [
     title: 'Baño en Seco (120ml)',
     category: 'belleza',
     price: 190.00,
-    image: 'assets/productos/bano-seco.png',
+    image: 'assets/productos/SHAMPOO EN SECO BAMBOO.png',
     description: 'Limpieza en 5 minutos sin agua. Ideal para invierno o post-quirúrgico.'
   },
   {
@@ -103,7 +103,7 @@ export const products = [
     title: 'Desenredante Acondicionador (250ml)',
     category: 'belleza',
     price: 175.00,
-    image: 'assets/productos/desenredante.png',
+    image: 'assets/productos/DESENREDANTE.png',
     description: 'Desenreda, acondiciona, restaura e hidrata. Aroma toronja.'
   },
 
@@ -113,7 +113,7 @@ export const products = [
     title: 'Tabletas Insecticidas Deltapro Tab',
     category: 'hogar',
     price: 220.00,
-    image: 'assets/productos/tabletas-insecticidas.png',
+    image: 'assets/productos/DELTAPRO TAB.png',
     description: 'Soluble en agua. Elimina cucarachas, hormigas, moscas, chinches, etc.'
   },
   {
@@ -156,7 +156,7 @@ export const products = [
     id: 'p19',
     title: 'Arena de Tofu (2.5 Kg)',
     category: 'gatos',
-    price: 280.00,
+    price: 331.00,
     image: 'assets/productos/arena-tofu.png',
     description: 'Natural, aglutinante, biodegradable. Aromas: Lavanda, Manzana, Fresa.'
   },
@@ -173,7 +173,7 @@ export const products = [
     title: 'Mezclas de Aceites Esenciales',
     category: 'gatos',
     price: 299.00,
-    image: 'assets/productos/aceites.png',
+    image: 'assets/productos/ANSIEDAD 120ML.png',
     description: 'Ayuda para Miedo, Ansiedad, Agresión y Depresión. Spray o Gotero.'
   }
 ];
