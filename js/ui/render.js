@@ -5,10 +5,19 @@ export function renderProduct(product) {
   // Translate category to CSS class identifier
   const categoryColorClass = `cat-${product.category}`;
   
+  const categoryNames = {
+    'antipulgas': 'Antipulgas y Garrapatas',
+    'belleza': 'Belleza e Higiene',
+    'hogar': 'Hogar',
+    'pecuario': 'Pecuario',
+    'gatos': 'Gatos'
+  };
+  const categoryDisplayName = categoryNames[product.category] || product.category;
+  
   return `
     <article class="product-card">
       <div class="product-badge ${categoryColorClass}">
-        ${product.categoryName}
+        ${categoryDisplayName}
       </div>
       <div class="product-image">
         <img src="${product.image}" alt="${product.title}" loading="lazy">
