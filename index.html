@@ -14,7 +14,7 @@
   
   <!-- Stylesheets -->
   <link rel="stylesheet" href="css/tokens.css">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css?v=4">
 </head>
 <body>
 
@@ -27,7 +27,7 @@
       <nav>
         <ul class="nav-links">
           <li><a href="#" class="nav-link">Inicio</a></li>
-          <li style="display: none;"><a href="#categorias" class="nav-link">Categorías</a></li>
+          <li><a href="#categorias" class="nav-link">Categorías</a></li>
           <li><a href="#tienda" class="nav-link">Tienda</a></li>
           <li><a href="#contacto" class="nav-link">Contacto</a></li>
         </ul>
@@ -56,47 +56,6 @@
     </div>
   </section>
 
-  <!-- Categories Banner -->
-  <section id="categorias" class="categories" style="display: none;">
-    <div class="container categories-container">
-      <div class="category-item" data-category="todos">
-        <div class="category-icon icon-img-container">
-          <img src="assets/LOGO%20PNP%202026.png" alt="Todos" class="category-img" style="object-fit: contain; padding: 8px;">
-        </div>
-        <span class="category-name">Ver Todos</span>
-      </div>
-      <div class="category-item" data-category="antipulgas">
-        <div class="category-icon icon-img-container">
-          <img src="assets/ICONO%20ANTIPULGAS.png" alt="Antipulgas" class="category-img">
-        </div>
-        <span class="category-name">Antipulgas</span>
-      </div>
-      <div class="category-item" data-category="belleza">
-        <div class="category-icon icon-img-container">
-          <img src="assets/ICONO%20BELLEZA.png" alt="Belleza e Higiene" class="category-img">
-        </div>
-        <span class="category-name">Belleza e Higiene</span>
-      </div>
-      <div class="category-item" data-category="gatos">
-        <div class="category-icon icon-img-container">
-          <img src="assets/ICONO%20GATOS.png" alt="Gatos" class="category-img">
-        </div>
-        <span class="category-name">Gatos</span>
-      </div>
-      <div class="category-item" data-category="hogar">
-        <div class="category-icon icon-img-container">
-          <img src="assets/ICONO%20HOGAR.png" alt="Hogar" class="category-img">
-        </div>
-        <span class="category-name">Hogar</span>
-      </div>
-      <div class="category-item" data-category="pecuario">
-        <div class="category-icon icon-img-container">
-          <img src="assets/ICONO%20PECUARIO.png" alt="Pecuario" class="category-img">
-        </div>
-        <span class="category-name">Pecuario</span>
-      </div>
-    </div>
-  </section>
 
   <!-- Store/Catalog Section -->
   <section id="tienda" class="products-section container">
@@ -107,6 +66,48 @@
     </div>
     
     <div id="store-wrapper" class="hidden-offscreen">
+      <!-- Categories Banner -->
+      <section id="categorias" class="categories" style="padding-top: 2rem; padding-bottom: 3rem; margin-bottom: 1rem;">
+        <div class="container categories-container">
+          <div class="category-item" data-category="todos">
+            <div class="category-icon icon-img-container">
+              <img src="assets/LOGO%20PNP%202026.png" alt="Todos" class="category-img" style="object-fit: contain; padding: 8px;">
+            </div>
+            <span class="category-name">Ver Todos</span>
+          </div>
+          <div class="category-item" data-category="antipulgas">
+            <div class="category-icon icon-img-container">
+              <img src="assets/ICONO%20ANTIPULGAS.png" alt="Antipulgas" class="category-img">
+            </div>
+            <span class="category-name">Antipulgas</span>
+          </div>
+          <div class="category-item" data-category="belleza">
+            <div class="category-icon icon-img-container">
+              <img src="assets/ICONO%20BELLEZA.png" alt="Belleza e Higiene" class="category-img">
+            </div>
+            <span class="category-name">Belleza e Higiene</span>
+          </div>
+          <div class="category-item" data-category="gatos">
+            <div class="category-icon icon-img-container">
+              <img src="assets/ICONO%20GATOS.png" alt="Gatos" class="category-img">
+            </div>
+            <span class="category-name">Gatos</span>
+          </div>
+          <div class="category-item" data-category="hogar">
+            <div class="category-icon icon-img-container">
+              <img src="assets/ICONO%20HOGAR.png" alt="Hogar" class="category-img">
+            </div>
+            <span class="category-name">Hogar</span>
+          </div>
+          <div class="category-item" data-category="pecuario">
+            <div class="category-icon icon-img-container">
+              <img src="assets/ICONO%20PECUARIO.png" alt="Pecuario" class="category-img">
+            </div>
+            <span class="category-name">Pecuario</span>
+          </div>
+        </div>
+      </section>
+
       <div id='collection-component-1790365961401'></div>
     <script type="text/javascript">
     /*<![CDATA[*/
@@ -134,11 +135,14 @@
           storefrontAccessToken: '39b926ae1bd9e76fd0acdc980255e830',
         });
         ShopifyBuy.UI.onReady(client).then(function (ui) {
-          ui.createComponent('collection', {
-            id: '661891350820',
-            node: document.getElementById('collection-component-1790365961401'),
-            moneyFormat: '%24%20%7B%7Bamount%7D%7D',
-            options: {
+          window.renderShopifyCollection = function(collectionId) {
+            var container = document.getElementById('collection-component-1790365961401');
+            container.innerHTML = ''; // Limpiar productos anteriores
+            ui.createComponent('collection', {
+              id: collectionId,
+              node: container,
+              moneyFormat: '%24%20%7B%7Bamount%7D%7D',
+              options: {
       "product": {
         "styles": {
           "product": {
@@ -204,7 +208,11 @@
       },
       "toggle": {}
     },
-          });
+            });
+          };
+          
+          // Cargar colección principal por defecto
+          window.renderShopifyCollection('661891350820');
         });
       }
     })();
